@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Roboto:wght@300&display=swap');
+
+:root{
+    --grey-color: #BAA89B;
+}
+
+.btn{
+    padding: 12px 56px;
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: 18px;
+    border: none;
+    background-color: #F1A183;
+    border-radius: 6px;
+    color: white;
+    transition: .350s;
+    resize: none;
+}
+
+.btn:hover{
+    transition: .350s;
+    background-color: #e37d56;
+}
+
+.btn:active{
+    transform: scale(1.02);
+}

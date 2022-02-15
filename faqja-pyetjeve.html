@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./faqja-pyetjeve.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./main.css">
+    <script src="https://kit.fontawesome.com/996af64ed2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./searchbar.css">
+    <title>Pyetjet</title>
+</head>
+
+<body>
+    <nav id="nav" class="">
+        <div class="logo">
+            <h1>Pyet</h1>
+        </div>
+        <input type="search" id="search-bar" placeholder="Kerko">
+        <div class="nav-icons">
+            <i class="fa-solid fa-bell fa-xl"></i>
+            <div class="nav-profile-image small-img">
+
+            </div>
+        </div>
+    </nav>
+    <div class="mobile-navigation-bar">
+        <ul id="mobile-navigation-icons-div">
+            <li class="mobile-menu-div-links">
+                <a href="./index.html"><i class="fa-solid fa-house fa-2xl"></i></a>
+            </li>
+            <li class="mobile-menu-div-links">
+                <a href="#"><i class="fa-brands fa-wpexplorer fa-2xl"></i></a>
+            </li>
+            <li class="mobile-menu-div-links">
+                <a href="#"><i class="fa-solid fa-circle-question fa-2xl"></i></a>
+            </li>
+            <li class="flex-li mobile-menu-div-links">
+                <a href="#">
+                    <i class="fa-solid fa-bell fa-2xl"></i>
+                </a>
+            </li>
+            <li class="flex-li mobile-menu-div-links">
+                <a href="#">
+                    <div class="menu-my-profile-img small-img"></div>
+                </a>
+            </li>
+            <li class="flex-li mobile-menu-div-links">
+                <a href="#">
+                    <div class="mobile-navigation-dropdown small-img">
+                        <ul id="mobile-dropdown-links">
+                            <li><a href="#">Top Topics</a></li>
+                            <li><a href="#">Rreth Nesh</a></li>
+                            <li><a href="#">Ndihma</a></li>
+                            <li><a href="#">Reklamo</a></li>
+                            <li><a href="#">Terms</a></li>
+                            <li><a href="#">Politika Privatësisë</a></li>
+                        </ul>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <ul id="mobile-filter-icons">
+            <a href="#" id=""><span id="mobile-filter-forum-text">filtro forumin</span>
+                <div class="mobile-filter-forum-div">
+                    <div>
+                        <input type="checkbox" id="Art" name="Art" value="Art">
+                        <label for="Art">Art</label>
+                    </div>
+                    <div>
+                        <input type="checkbox">
+                        <label>Botë</label>
+                    </div>
+                    <div>
+                        <input type="checkbox">
+                        <label>Ekonomi</label>
+                    </div>
+                    <div>
+                        <input type="checkbox">
+                        <label>Gjuhë</label>
+                    </div>
+                    <div>
+                        <input type="checkbox">
+                        <label>Matematikë</label>
+                    </div>
+                    <div>
+                        <input type="checkbox">
+                        <label>Shkencë</label>
+                    </div>
+                    <div>
+                        <input type="checkbox">
+                        <label>Teknologji</label>
+                    </div>
+                    <div>
+                        <input type="checkbox">
+                        <label>Tjetër</label>
+                    </div>
+                </div>
+                </a>
+            <form action="" id="search-bar-form">
+                <input type="search" id="mobile-search-input" required>
+                <i class="fa fa-search"></i>
+            </form>
+            <button class="btn add-question-btn" onclick="openPopup()">+ Shto Pyetje</button>
+        </ul>
+    </div>
+    <main>
+        <div class="add-question-popup-div">
+            <div class="add-question-div-form">
+                <div class="top-of-question-form">
+                    <p>PYETJE E RE</p>
+                    <a href="#" onclick="closePopup()">X</a>
+                </div>
+                <div class="body-of-question-form">
+                    <label for="titulli"><b>titulli pyetjes</b></label>
+                    <input type="text" name="titulli" placeholder="titulli" id="titulli-input"><br>
+                    <label for="fusha-tekstit"><b>fusha tekstit</b></label>
+                    <textarea name="fusha-tekstit" cols="30" rows="10"></textarea><br>
+                    <label><b>tema</b></label>
+                    <div class="checkboxes-div">
+                        <input type="checkbox" id="Art" name="Art" value="Art">
+                        <label for="Art">Art</label>
+                        <input type="checkbox">
+                        <label>Botë</label>
+                        <input type="checkbox">
+                        <label>Ekonomi</label>
+                        <input type="checkbox">
+                        <label>Gjuhë</label>
+                        <input type="checkbox">
+                        <label>Matematikë</label>
+                        <input type="checkbox">
+                        <label>Shkencë</label>
+                        <input type="checkbox">
+                        <label>Teknologji</label>
+                        <input type="checkbox">
+                        <label>Tjetër</label>
+                    </div>
+                </div>
+                <button class="btn" onclick="closePopup()">+ Krijo Pyetjen</button>
+            </div>
+        </div>
+        <div class="menu-div">
+            <ul class="sticky">
+                <li class="flex-li" id="menu-text">
+                    <a href="#">
+                        <div class="small-img"></div>
+                        <p>&nbsp;&nbsp;<b>MENU</b></p>
+                    </a>
+                </li>
+                <li class="menu-div-links">
+                    <a href="./index.html"><i class="fa-solid fa-house fa-xl"></i>&nbsp;&nbsp;HOME</a>
+                </li>
+                <li class="menu-div-links">
+                    <a href="#nav"><i class="fa-brands fa-wpexplorer fa-xl"></i>&nbsp;&nbsp;PYETJET</a>
+                </li>
+                <li class="menu-div-links">
+                    <a href="#"><i class="fa-solid fa-circle-question fa-xl"></i>&nbsp;&nbsp;PYETJET E MIA</a>
+                </li>
+                <li class="flex-li menu-div-links">
+                    <a href="#">
+                        <div class="menu-my-profile-img small-img"></div>&nbsp;&nbsp;<p>PROFILI IM</p>
+                    </a>
+                </li>
+                <div class="filter-forum-div">
+                    <b style="color: var(--grey-color);">filtro forumin</b>
+                    <div>
+                        <input type="checkbox" id="Art" name="Art" value="Art">
+                        <label for="Art">Art</label>
+                    </div>
+                    <div>
+                        <input type="checkbox">
+                        <label>Botë</label>
+                    </div>
+                    <div>
+                        <input type="checkbox">
+                        <label>Ekonomi</label>
+                    </div>
+                    <div>
+                        <input type="checkbox">
+                        <label>Gjuhë</label>
+                    </div>
+                    <div>
+                        <input type="checkbox">
+                        <label>Matematikë</label>
+                    </div>
+                    <div>
+                        <input type="checkbox">
+                        <label>Shkencë</label>
+                    </div>
+                    <div>
+                        <input type="checkbox">
+                        <label>Teknologji</label>
+                    </div>
+                    <div>
+                        <input type="checkbox">
+                        <label>Tjetër</label>
+                    </div>
+                </div>
+            </ul>
+        </div>
+        <div class="questions-div">
+            <div class="question-card-div">
+                <div class="question-author-profile credits-upper">
+                    <div class="author-user-img small-img"></div>
+                    <p><span>Posted By:</span> <span class="username"><b>NoName User</b></span></p>
+                </div>
+                <div class="question-content-div">
+                    <h1>What does the fox say?</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo exercitationem repudiandae libero
+                        doloremque nemo itaque magni placeat nisi dicta sequi commodi animi, temporibus, tempora quod
+                        vero fugit atque, nihil nulla similique sapiente! Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Iusto rem, porro aperiam officiis voluptate id laudantium itaque labore
+                        ratione tempore, iure cum animi aliquam eum, ullam odit? Maiores, sequi exercitationem! Ex,
+                        odit?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo exercitationem repudiandae libero
+                        doloremque nemo itaque magni placeat nisi dicta sequi commodi animi, temporibus, tempora quod
+                        vero fugit atque, nihil nulla similique sapiente! Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Iusto rem, porro aperiam officiis voluptate id laudantium itaque labore
+                        ratione tempore, iure cum animi aliquam eum, ullam odit? Maiores, sequi exercitationem! Ex,
+                        odit?
+                    </p>
+                    <hr>
+                    <div class="post-info">
+                        <div class="question-vote-div">
+                            <svg class="vote-btn" width="24" height="24" viewBox="0 0 20 11" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M18.904 8.96374L10.1951 0.255048C10.0319 0.0917314 9.81031 0 9.57936 0C9.34834 0 9.12685 0.0917894 8.96353 0.255106L0.255077 8.9638C-0.0850258 9.3039 -0.0850258 9.85528 0.255077 10.1954C0.595123 10.5354 1.14656 10.5355 1.48666 10.1954L9.57936 2.10251L17.6725 10.1954C17.8425 10.3654 18.0654 10.4504 18.2883 10.4504C18.5112 10.4504 18.734 10.3654 18.9041 10.1953C19.2441 9.85522 19.2441 9.30384 18.904 8.96374Z"
+                                    fill="#BAA89B" />
+                            </svg>
+                            <h4 id="number-of-votes">56</h4>
+                            <svg class="vote-btn" width="24" height="24" viewBox="0 0 20 11" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M18.904 1.84113L10.1951 10.5498C10.0318 10.7131 9.81028 10.8049 9.57932 10.8049C9.34831 10.8049 9.12682 10.7131 8.9635 10.5498L0.255047 1.84107C-0.0850563 1.50097 -0.0850563 0.949595 0.255047 0.609492C0.595092 0.269447 1.14653 0.269389 1.48663 0.609492L9.57932 8.70236L17.6724 0.609492C17.8425 0.43944 18.0654 0.354443 18.2882 0.354443C18.5111 0.354443 18.734 0.43944 18.9041 0.60955C19.2441 0.949653 19.2441 1.50103 18.904 1.84113Z"
+                                    fill="#BAA89B" />
+                            </svg>
+                        </div>
+                        <div class="comments-div">
+                            <i class="fa-solid fa-comment"></i>&nbsp;&nbsp;
+                            <h4>50+</h4>
+                        </div>
+                        <div class="question-author-profile credits-down">
+                            <div class="author-user-img small-img"></div>
+                            <p><span>Posted By:</span> <span class="username"><b>NoName User</b></span></p>
+                        </div>
+                        <h4><span id="posted-ago">12</span>h ago</h4>
+                        <div class="question-options-div">
+                            <i class="fa-solid fa-ellipsis fa-xl"></i>
+                            <div class="question-card-options">
+                                <a href="#" style="color: red;">Raporto</a>
+                                <a href="#">Shprëndaje</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="aside-main-div sticky">
+            <button class="btn add-question-btn" onclick="openPopup()">+ Shto Pyetje</button>
+            <ul>
+                <li><a href="#">Top Topics</a></li>
+                <li><a href="#">Rreth Nesh</a></li>
+                <li><a href="#">Ndihma</a></li>
+                <li><a href="#">Reklamo</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Politika Privatësisë</a></li>
+            </ul>
+        </div>
+    </main>
+
+    <script>
+        var searchBarForm = document.querySelector('#search-bar-form');
+        var mobileFilterForumText = document.querySelector('#mobile-filter-forum-text');
+        var addQuestionBtn = document.querySelector('.add-question-btn');
+        searchBarForm.addEventListener('click', () => {
+            mobileFilterForumText.style.display = 'none';
+            addQuestionBtn.style.display = 'none';
+        })
+        document.body.addEventListener('click', () => {
+            setTimeout(() => {
+                if (searchBarForm.offsetWidth == 50) {
+                    mobileFilterForumText.style.display = 'block';
+                    addQuestionBtn.style.display = 'block';
+                }
+            }, 500);
+        })
+
+        const nav = document.querySelector('.mobile-navigation-bar');
+        let navTop = nav.offsetTop;
+
+        function fixedNav() {
+            if (window.scrollY >= navTop) {
+                nav.classList.add('fixed');
+            } else {
+                nav.classList.remove('fixed');
+            }
+        }
+
+        window.addEventListener('scroll', fixedNav);
+
+        // Change to your STICKY element
+        let parent = document.querySelectorAll('.sticky').parentElement;
+
+        while (parent) {
+            const hasOverflow = getComputedStyle(parent).overflow;
+            if (hasOverflow !== 'visible') {
+                console.log(hasOverflow, parent);
+            }
+            parent = parent.parentElement;
+        }
+
+        let addQuestionPopupDiv = document.querySelector('.add-question-popup-div');
+
+        function openPopup() {
+            addQuestionPopupDiv.style.display = 'inline-block';
+            console.log("hello")
+        }
+
+        function closePopup() {
+            addQuestionPopupDiv.style.display = 'none';
+        }
+
+        var questionOptionsDiv = document.querySelector('.question-options-div');
+        var questionCardOptions = document.querySelector('.question-card-options');
+
+        questionOptionsDiv.addEventListener('click', () => {
+            if (questionOptionsDiv.classList.contains('addMenuIconColor')) {
+                questionOptionsDiv.classList.remove('addMenuIconColor')
+                questionCardOptions.style.display = "none";
+            } else {
+                questionOptionsDiv.classList.add('addMenuIconColor')
+                questionCardOptions.style.display = "block";
+            }
+        })
+
+        let mobileNavigationDropdown = document.querySelector('.mobile-navigation-dropdown')
+        let mobileDropdownLinks = document.querySelector('#mobile-dropdown-links')
+
+        mobileNavigationDropdown.addEventListener('click', ()=>{
+            if(mobileDropdownLinks.style.display == "none"){
+                mobileDropdownLinks.style.display = "block"
+            }else{
+                mobileDropdownLinks.style.display = "none"
+            }
+        })
+
+        let mobileFilterForumDiv = document.querySelector('.mobile-filter-forum-div');
+
+        mobileFilterForumText.addEventListener('click', ()=>{
+            if(mobileFilterForumDiv.style.display == "none"){
+                mobileFilterForumDiv.style.display = "block"
+            }else{
+                mobileFilterForumDiv.style.display = "none"
+            }
+        })
+    </script>
+</body>
+
+</html>
